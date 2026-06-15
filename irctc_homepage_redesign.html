@@ -1,0 +1,170 @@
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;}
+.page{background:#f0f4f8;min-height:600px;}
+.navbar{background:#003580;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-icon{width:36px;height:36px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.nav-logo-icon svg{width:22px;height:22px;}
+.nav-brand{color:#fff;font-size:16px;font-weight:700;letter-spacing:0.5px;}
+.nav-links{display:flex;gap:4px;}
+.nav-link{color:rgba(255,255,255,0.75);font-size:13px;padding:6px 14px;border-radius:4px;cursor:pointer;transition:background 0.15s;}
+.nav-link:hover{background:rgba(255,255,255,0.12);}
+.nav-link.active{color:#fff;background:rgba(255,255,255,0.15);}
+.nav-cta{background:#FF6600;color:#fff;font-size:13px;font-weight:600;padding:7px 20px;border-radius:5px;border:none;cursor:pointer;}
+.hero{background:linear-gradient(135deg,#002b6b 0%,#003580 60%,#004aa0 100%);padding:48px 32px 0;display:flex;gap:32px;align-items:flex-end;}
+.hero-left{flex:1;padding-bottom:32px;}
+.hero-tag{display:inline-block;background:rgba(255,102,0,0.2);color:#FF9944;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+.hero-title{color:#fff;font-size:30px;font-weight:700;line-height:1.25;margin-bottom:8px;}
+.hero-sub{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:0;}
+.hero-img{width:340px;flex-shrink:0;position:relative;}
+.hero-img img{width:100%;display:block;}
+.search-card{background:#fff;border-radius:12px 12px 0 0;margin:0 32px;box-shadow:0 -4px 24px rgba(0,0,0,0.1);padding:24px 28px;}
+.search-tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:2px solid #f0f0f0;}
+.stab{font-size:13px;padding:8px 18px;color:#888;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;}
+.stab.active{color:#003580;font-weight:600;border-color:#003580;}
+.search-row{display:grid;grid-template-columns:1fr 40px 1fr 1fr 1fr 140px;gap:10px;align-items:end;}
+.field-group{display:flex;flex-direction:column;gap:5px;}
+.field-label{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.5px;}
+.field-input{border:1.5px solid #e0e0e0;border-radius:6px;padding:9px 12px;font-size:14px;color:#1a1a1a;background:#fafafa;outline:none;}
+.swap-btn{width:36px;height:36px;border-radius:50%;border:1.5px solid #e0e0e0;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;align-self:flex-end;flex-shrink:0;}
+.search-btn{background:#FF6600;color:#fff;font-size:14px;font-weight:700;padding:10px 0;border-radius:7px;border:none;cursor:pointer;width:100%;}
+.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 32px;margin-top:16px;}
+.qa-card{background:#fff;border-radius:10px;border:1px solid #e8e8e8;padding:16px;display:flex;align-items:center;gap:12px;cursor:pointer;}
+.qa-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.qa-title{font-size:13px;font-weight:600;color:#1a1a1a;}
+.qa-sub{font-size:11px;color:#888;}
+.train-svg{width:100%;border-radius:8px 8px 0 0;}
+</style>
+<div class="page">
+  <div class="navbar">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="8" width="18" height="10" rx="2" fill="#003580" stroke="#003580" stroke-width="1"/>
+          <rect x="3" y="8" width="18" height="10" rx="2" fill="none" stroke="#003580" stroke-width="1.5"/>
+          <rect x="2" y="8" width="20" height="9" rx="2" fill="#003580"/>
+          <path d="M4 10h16M4 14h16M8 8v9M16 8v9" stroke="#fff" stroke-width="1.2"/>
+          <circle cx="7" cy="19" r="2" fill="#003580"/>
+          <circle cx="17" cy="19" r="2" fill="#003580"/>
+          <path d="M5 19h14" stroke="#003580" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <span class="nav-brand">IRCTC</span>
+    </div>
+    <div class="nav-links">
+      <div class="nav-link active">Trains</div>
+      <div class="nav-link">Hotels</div>
+      <div class="nav-link">Holidays</div>
+      <div class="nav-link">Meals</div>
+      <div class="nav-link">Help</div>
+    </div>
+    <button class="nav-cta">Login / Sign Up</button>
+  </div>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">🇮🇳 Official Ticket Booking</div>
+      <div class="hero-title">Book Train Tickets<br>Fast & Easy</div>
+      <div class="hero-sub">13,000+ trains · 7,000+ stations · Instant confirmation</div>
+    </div>
+    <div class="hero-img">
+      <svg class="train-svg" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+        <rect width="340" height="160" fill="none"/>
+        <rect x="20" y="60" width="280" height="70" rx="18" fill="#1a56c4"/>
+        <rect x="20" y="60" width="280" height="30" rx="18" fill="#1a56c4"/>
+        <rect x="20" y="75" width="280" height="55" rx="0" fill="#1a56c4"/>
+        <rect x="20" y="60" width="280" height="72" rx="18" fill="#1565C0"/>
+        <rect x="24" y="64" width="276" height="60" rx="15" fill="#1976D2"/>
+        <rect x="20" y="108" width="280" height="10" fill="#1565C0" rx="2"/>
+        <rect x="20" y="104" width="280" height="8" fill="#0D47A1"/>
+        <rect x="56" y="68" width="50" height="36" rx="6" fill="#81D4FA"/>
+        <rect x="116" y="68" width="50" height="36" rx="6" fill="#81D4FA"/>
+        <rect x="176" y="68" width="50" height="36" rx="6" fill="#81D4FA"/>
+        <rect x="236" y="68" width="44" height="36" rx="6" fill="#81D4FA"/>
+        <path d="M20 82 Q2 82 2 100 L20 100" fill="#0D47A1"/>
+        <ellipse cx="2" cy="100" rx="4" ry="4" fill="#0D47A1"/>
+        <rect x="280" y="82" width="36" height="18" rx="14" fill="#FF6600"/>
+        <circle cx="60" cy="120" r="12" fill="#1a1a1a"/>
+        <circle cx="60" cy="120" r="7" fill="#666"/>
+        <circle cx="60" cy="120" r="3" fill="#ccc"/>
+        <circle cx="130" cy="120" r="12" fill="#1a1a1a"/>
+        <circle cx="130" cy="120" r="7" fill="#666"/>
+        <circle cx="130" cy="120" r="3" fill="#ccc"/>
+        <circle cx="200" cy="120" r="12" fill="#1a1a1a"/>
+        <circle cx="200" cy="120" r="7" fill="#666"/>
+        <circle cx="200" cy="120" r="3" fill="#ccc"/>
+        <circle cx="270" cy="120" r="12" fill="#1a1a1a"/>
+        <circle cx="270" cy="120" r="7" fill="#666"/>
+        <circle cx="270" cy="120" r="3" fill="#ccc"/>
+        <line x1="0" y1="132" x2="340" y2="132" stroke="#555" stroke-width="3"/>
+        <line x1="0" y1="138" x2="340" y2="138" stroke="#333" stroke-width="2"/>
+        <text x="22" y="100" font-family="Arial" font-weight="bold" font-size="11" fill="#fff">वन्दे भारत</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="search-card">
+    <div class="search-tabs">
+      <div class="stab active">One Way</div>
+      <div class="stab">Round Trip</div>
+      <div class="stab">Multi-City</div>
+    </div>
+    <div class="search-row">
+      <div class="field-group">
+        <div class="field-label">From</div>
+        <div class="field-input" style="color:#888;">New Delhi (NDLS)</div>
+      </div>
+      <div class="swap-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#003580" stroke-width="2.5" stroke-linecap="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+      </div>
+      <div class="field-group">
+        <div class="field-label">To</div>
+        <div class="field-input" style="color:#bbb;">Search destination...</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Date</div>
+        <div class="field-input">15 Jun 2026</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Class</div>
+        <div class="field-input" style="color:#888;">All Classes ▾</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">&nbsp;</div>
+        <button class="search-btn">Search Trains</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-actions" style="margin-top:16px;margin-bottom:20px;">
+    <div class="qa-card">
+      <div class="qa-icon" style="background:#e8f0fe;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1967D2" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M7 9h10M7 13h6"/></svg>
+      </div>
+      <div>
+        <div class="qa-title">Check PNR Status</div>
+        <div class="qa-sub">Track your booking</div>
+      </div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-icon" style="background:#fce8e6;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c5221f" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="qa-title">Train Schedule</div>
+        <div class="qa-sub">Live arrivals & departures</div>
+      </div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-icon" style="background:#e6f4ea;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#188038" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+      </div>
+      <div>
+        <div class="qa-title">Cancel Ticket</div>
+        <div class="qa-sub">Manage your bookings</div>
+      </div>
+    </div>
+  </div>
+</div>
